@@ -1,6 +1,6 @@
 # odin-recipes
 
-I created a HTML recipe document that links to multiple recipes.
+I created a HTML only recipe website that links to multiple recipes.
 
 ## learning outcomes achieved
 
