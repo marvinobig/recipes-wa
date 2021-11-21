@@ -16,25 +16,41 @@ body {
     min-height: 100vh;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    overflow-y: scroll;
+    margin: auto;
+    height: 100px;
+    width: 180px;
+}
+
+.fcont {
+    border: 1.5px solid #000000;
+    width: 160px;
+}
+
 h1 {
     text-align: center;
 }
 
 img {
     height: auto;
-    width: 400px;
-    border: 1px solid black;
-    margin: 20px 20px 20px 0;
+    max-width: 400px;
+    border: 1.5px solid black;
+    margin: 20px 0px 20px 0;
 }
 
-.description, .nutrients, .ingredients, .steps, #recipes, #intro, #outro {
+.description, .nutrients, .ingredients, .steps, #intro, #outro {
     margin: auto;
-    width: 500px;
+    max-width: 500px;
     text-align: justify;
     padding: 20px;
 }
 
-#recipes {
+.recipes, #rtitle {
     text-align: center;
 }
 
