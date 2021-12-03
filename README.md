@@ -1,6 +1,6 @@
 # odin-recipes
 
-I created a HTML only recipe website that links to multiple recipes.
+I created a HTML only recipe website that links to multiple recipes to show off my newly acquired HTML skills and demonstrate my capabilites.
 
 ## Languages used:
 * HTML
