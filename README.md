@@ -2,14 +2,18 @@
 
 I created a HTML only recipe website that links to multiple recipes.
 
-## learning outcomes achieved
+## Languages used:
+* HTML
+* CSS
 
-- Structure HTML pages using boilerplate tags e.g. head, body and HTML tags.
-- Link to multiple HTML pages using anchor tags.
-- Embed an image in HTML using image tags.
-- Use ordered and unordered lists tags.
-- Use text formating tags e.g. bold and emphasize.
-- Use paragraph tags.
+## Tools Used:
+* Visual Studio Code
+* Firefox Dev Tools
+* Chrome Dev Tools
+* Favicon.cc
+
+## Disclaimer:
+I've added some css to make it look more appealing to the eyes. Also designed the look of the website according to a design style called "brutalist web design".
 
 
 
