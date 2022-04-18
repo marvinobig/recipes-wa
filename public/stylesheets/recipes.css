@@ -7,7 +7,7 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px;
 }
 
@@ -18,7 +18,8 @@ body {
     align-items: center;
     border: 2px solid #000000;
     height: 100%;
-    max-height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .content {
@@ -55,6 +56,36 @@ img {
     max-width: 500px;
     text-align: justify;
     padding: 20px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    border: 2px solid #000000;
+}
+
+.card-description {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.card-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.post-metadata {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 200px;
 }
 
 .recipes, #rtitle {
