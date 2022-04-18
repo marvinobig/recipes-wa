@@ -7,8 +7,10 @@ app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/", (req, res) => {
-  res.render("index", { title: "Recipes" });
-});
+const indexRouter = require("./routes/indexRouter");
+const recipesRouter = require("./routes/recipesRouter");
+
+app.use("/", indexRouter);
+app.use("/recipes", recipesRouter);
 
 module.exports = app;
