@@ -1,114 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odin Recipes: Lasagna</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Recipe</title>
 
-    <link rel="stylesheet" href="../stylesheets/odin-recipes.css" />
-
-</head>
-    <body>
-        <div class="container">
-                <br>
-            <a href="../index.html">Home</a>
-                <br>
-
-            <div class="description">
-                <h1>Lasagna</h1>
-            
-                    <img src="../images/lasagna.jpeg" alt="lasagna portion on a plate">
-                
-                <h2>Description</h2>
-                    <p>Prep: 30 mins, Cook: 30 mins. <br> <strong>Total: 1 hr</strong></p>
-            </div>
-            
-                <br>
-
-            <div class="nutrients">
-                <h4>Macros</h4>
-                    <ul>
-                        <li><strong>Protein: </strong>41.3g</li> 
-                        <li><strong>Carbohydrates: </strong>53.4g</li>
-                        <li><strong>Fat: </strong>29.3g</li>
-                    </ul>
-
-                    <br>
-
-                <h4>Micros</h4>
-                    <ul>
-                        <li><strong>Cholesterol: </strong>108.3mg</li>
-                        <li><strong>Sodium: </strong>707.3mg</li>
-                    </ul>
-
-                    <br>
-
-                <p><u>Per Serving: 643 calories</u></p>
-            </div>
-            
-                <br>
-
-            <div class="ingredients">
-                <h2>Ingredients</h2>
-                    <ul>
-                        <li>1 (16 ounce) package lasagna noodles</li>
-
-                            <br>
-
-                        <li>1 pound lean ground beef</li>
-
-                            <br>
-                            
-                        <li>salt and pepper to taste</li>
-
-                            <br>
-                            
-                        <li>1 (16 ounce) jar spaghetti sauce</li>
-
-                            <br>
-                            
-                        <li>1 clove garlic, minced</li>
-
-                            <br>
-                            
-                        <li>½ pound shredded mozzarella cheese</li>
-
-                            <br>
-                            
-                        <li>½ pound shredded Cheddar cheese</li>
-
-                            <br>
-                            
-                        <li>1 pint ricotta cheese</li>
-                    </ul>
-            </div>
-            
-
-                <br>
-
-            <div class="steps">
-                <h2>Steps</h2>
-                    <ol>
-                        <li>Bring a large pot of lightly salted water to a boil.
-                            Add pasta and cook for 8 to 10 minutes or until al dente; drain.</li>
-
-                            <br>
-
-                        <li>Preheat oven to 350 degrees F (175 degrees C). In a large skillet over medium-high heat, 
-                            brown beef and season with salt and pepper; drain.
-                            Stir in spaghetti sauce and garlic and simmer 5 minutes.</li> 
-
-                            <br>
-
-                        <li>In a medium bowl, combine mozzarella, Cheddar and ricotta; stir well.
-                            In 9x13 inch pan, alternate layers of noodles, meat mixture and cheese mixture until pan is filled.</li>
-
-                            <br>
-                            
-                        <li>Bake in preheated oven for 30 minutes, or until cheese is melted and bubbly.</li>
-                    </ol>
-            </div>
-        </div>
-    </body>
+    <link rel="stylesheet" href="/stylesheets/recipes.css" />
+  </head>
+  <body>
+    <div class="container">
+      <%- include('partials/navbar.ejs') %>
+      <form action="#" method="post">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" />
+        <label for="category">Category</label>
+        <select name="category" id="category">
+          <option hidden disabled selected>Select Category</option>
+          <option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option>
+          <option value="Dinner">Dinner</option>
+          <option value="Snack">Snack</option>
+          <option value="Drink">Drink</option>
+        </select>
+        <label for="description">Description</label>
+        <textarea id="description" name="description"></textarea>
+        <label for="time-to-make">Time to Make</label>
+        <input type="number" name="time-to-make" id="time-to-make" />
+        <label for="ingredients">Ingredients</label>
+        <textarea name="ingredients" id="ingredients"></textarea>
+        <label for="steps">Steps</label>
+        <textarea name="steps" id="steps"></textarea>
+        <label for="food-img">Image of Cooked Food</label>
+        <input type="file" name="food-img" id="food-img" />
+        <button type="submit" class="fcont">Add</button>
+      </form>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Recipe</title>
+
+    <link rel="stylesheet" href="/stylesheets/recipes.css" />
+  </head>
+  <body>
+    <div class="container">
+      <%- include('partials/navbar.ejs') %>
+      <form action="#" method="post">
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" />
+        <label for="category">Category</label>
+        <select name="category" id="category">
+          <option hidden disabled selected>Select Category</option>
+          <option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option>
+          <option value="Dinner">Dinner</option>
+          <option value="Snack">Snack</option>
+          <option value="Drink">Drink</option>
+        </select>
+        <label for="description">Description</label>
+        <textarea id="description" name="description"></textarea>
+        <label for="time-to-make">Time to Make</label>
+        <input type="datetime" name="time-to-make" id="time-to-make" />
+        <label for="ingredients">Ingredients</label>
+        <textarea name="ingredients" id="ingredients"></textarea>
+        <label for="steps">Steps</label>
+        <textarea name="steps" id="steps"></textarea>
+        <label for="food-img">Image of Cooked Food</label>
+        <input type="file" name="food-img" id="food-img" />
+        <button type="submit" class="fcont">Update</button>
+      </form>
+    </div>
+  </body>
+</html>
