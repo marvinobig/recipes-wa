@@ -44,4 +44,12 @@ router.get("/", (req, res) => {
   res.render("viewAllRecipes", { title: "All Recipes", recipes: recipes });
 });
 
+router.get("/addRecipe", (req, res) => {
+  res.render("addRecipeForm");
+});
+
+router.get("/deleteRecipe", (req, res) => {
+  res.render("deleteRecipeForm");
+});
+
 module.exports = router;
