@@ -1,0 +1,16 @@
+const http = require("http");
+const app = require("../app");
+
+const port = process.env.PORT || 3000;
+app.set("port", port);
+
+const server = http.createServer(app);
+
+server.listen(port, (err) => {
+  if (err) {
+    console.log(`Something went wrong:
+        ${err}`);
+  } else {
+    console.log(`App is live at: ${port}`);
+  }
+});

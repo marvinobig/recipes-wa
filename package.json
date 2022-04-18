@@ -1,0 +1,30 @@
+{
+  "name": "recipes",
+  "version": "1.0.0",
+  "description": "I created a recipe website where you can upload recipes to a database and display them.",
+  "main": "index.js",
+  "scripts": {
+    "devstart": "nodemon ./bin/www",
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marvinobig/recipes.git"
+  },
+  "keywords": [],
+  "author": "Marvin Obig",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marvinobig/recipes/issues"
+  },
+  "homepage": "https://github.com/marvinobig/recipes#readme",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.3",
+    "install": "^0.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
