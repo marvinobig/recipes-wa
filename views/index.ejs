@@ -1,65 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
 
-        <link rel="stylesheet" href="/stylesheets/recipes.css" />
-
-        <title><%= title %> </title>
-    </head>
-
-    <body>
-        <div class="container">
-            <div id="intro">
-                <h1>Odin Recipes</h1>
-
-                        <br>
-                        <br>
-
-                <p>Welcome to <%= title %>, the only catalog of food recipes you'll ever need.
-                Add, edit & view your recipes wherever you are, whenever you want.</p>
-
-                        <br>
-                        
-                <p><strong>The Odin Project</strong></p>
-            </div>
-            
-
-                    <br>
-                    <br>
-                    
-            <h2 id="rtitle">Recipe Catogories</h2>
-
-                    <br>
-
-                <div class="content">
-                    <div class="recipes fcont">
-                        <a href="#">Fried Eggs</a>
-                    </div>
-
-                    <div class="recipes fcont">
-                        <a href="#">Reuben Sandwich</a>
-                    </div>
-
-                    <div class="recipes fcont">
-                        <a href="#">Lasagna</a>
-                    </div>
-                </div>
-                        
-                        </br>
-                        </br>
-
-                <a href="/recipes"><button class="fcont">View All Recipes</button></a>
-
-                <div id="outro">
-                    <h3>Thank You!!</h3>
-
-                        <br>
-
-                    <p>This has been <strong>Marvin Obig</strong> and this is my recipe project.</p>
-                </div>   
-        </div>
-    </body>
+    <link rel="stylesheet" href="/stylesheets/recipes.css" />
+  </head>
+  <body>
+    <div class="container">
+      <%- include('partials/navbar') %>
+      <div id="intro">
+        <h1>Odin Recipes</h1>
+        <p>
+          Welcome to <%= title %>, the only catalog of food recipes you'll ever
+          need. Add, edit & view your recipes wherever you are, whenever you
+          want.
+        </p>
+        <p><strong>The Odin Project</strong></p>
+      </div>
+      <%- include('partials/categories') %>
+      <div id="outro">
+        <h3>Thank You!!</h3>
+        <p>
+          This has been <strong>Marvin Obig</strong> and this is my recipe
+          project.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
