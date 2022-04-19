@@ -6,6 +6,11 @@ const app = express();
 
 dotenv.config();
 
+const db = process.env.MONGODB_URI;
+mongoose.connect(db, () => {
+  console.log("Connected");
+});
+
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
