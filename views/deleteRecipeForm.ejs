@@ -4,11 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Delete Recipe</title>
+    <title>Delete: <%= recipeInfo.name %></title>
 
     <link rel="stylesheet" href="/stylesheets/recipes.css" />
   </head>
   <body>
-    <div class="container"><%- include('partials/navbar.ejs') %></div>
+    <div class="container">
+      <%- include('partials/navbar.ejs') %>
+
+      <h3>You are about to delete the <%= recipeInfo.name %> recipe.</h3>
+      <p>Enter password to proceed:</p>
+      <form action="/recipes/<%= recipeInfo._id %>/deleteRecipe" method="post">
+        <label for="password">Password</label>
+        <input id="password" type="text" name="password" />
+
+        <button class="fcont delete" type="submit">Delete</button>
+      </form>
+    </div>
   </body>
 </html>
