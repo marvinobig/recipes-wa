@@ -22,7 +22,8 @@
   "dependencies": {
     "ejs": "^3.0.2",
     "express": "^4.17.3",
-    "install": "^0.13.0"
+    "install": "^0.13.0",
+    "mongoose": "^6.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
