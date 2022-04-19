@@ -1,55 +1,25 @@
 const express = require("express");
 const router = express.Router();
+const recipeController = require("../controllers/recipeController");
 
-const recipes = [
-  {
-    img: "",
-    name: "Lasagne",
-    category: "Dinner",
-    description: "Best dinner",
-    url: "",
-    user: "Marv",
-    dateAdded: new Date().toLocaleDateString(),
-  },
-  {
-    img: "",
-    name: "Fried Egg",
-    category: "Breakfast",
-    description: "Protein to start the day off.",
-    url: "",
-    user: "Simo",
-    dateAdded: new Date().toLocaleDateString(),
-  },
-  {
-    img: "",
-    name: "Chocolate Brownie",
-    category: "Snack",
-    description: "Chocolaty goodness.",
-    url: "",
-    user: "Martin",
-    dateAdded: new Date().toLocaleDateString(),
-  },
-  {
-    img: "",
-    name: "Turkey Sandwich",
-    category: "Lunch",
-    description: "Made with love.",
-    url: "",
-    user: "Simon",
-    dateAdded: new Date().toLocaleDateString(),
-  },
-];
+router.get("/", recipeController.recipes_get);
 
-router.get("/", (req, res) => {
-  res.render("viewAllRecipes", { title: "All Recipes", recipes: recipes });
-});
+router.get("/addRecipe", recipeController.recipe_add_form_get);
 
-router.get("/addRecipe", (req, res) => {
-  res.render("addRecipeForm");
-});
+router.post("/newRecipe", recipeController.create_recipe);
 
-router.get("/deleteRecipe", (req, res) => {
-  res.render("deleteRecipeForm");
-});
+router.get("/:recipe", recipeController.view_recipe_get);
+
+router.get(
+  "/:recipe/updateRecipeForm",
+  recipeController.recipe_update_form_get
+);
+router.post("/:recipe/updateRecipe", recipeController.recipe_update_form_post);
+
+router.get(
+  "/:recipe/deleteRecipeForm",
+  recipeController.recipe_delete_form_get
+);
+router.post("/:recipe/deleteRecipe", recipeController.recipe_delete_form_post);
 
 module.exports = router;
