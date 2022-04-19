@@ -11,9 +11,15 @@
   <body>
     <div class="container">
       <%- include('partials/navbar.ejs') %>
-      <form action="#" method="post">
+      <form action="/recipes/<%= recipeInfo._id %>/updateRecipe" method="post">
         <label for="name">Name</label>
-        <input id="name" type="text" name="name" />
+        <input
+          id="name"
+          type="text"
+          name="name"
+          value="<%= recipeInfo.name %>"
+        />
+
         <label for="category">Category</label>
         <select name="category" id="category">
           <option hidden disabled selected>Select Category</option>
@@ -23,16 +29,38 @@
           <option value="Snack">Snack</option>
           <option value="Drink">Drink</option>
         </select>
+
         <label for="description">Description</label>
-        <textarea id="description" name="description"></textarea>
+        <textarea id="description" name="description">
+          <%= recipeInfo.description %>
+        </textarea>
+
         <label for="time-to-make">Time to Make</label>
-        <input type="datetime" name="time-to-make" id="time-to-make" />
+        <input
+          type="datetime"
+          name="time-to-make"
+          id="time-to-make"
+          value="<%= recipeInfo.time %>"
+        />
+
         <label for="ingredients">Ingredients</label>
-        <textarea name="ingredients" id="ingredients"></textarea>
+        <textarea name="ingredients" id="ingredients">
+          <%= recipeInfo.ingredients %>
+        </textarea>
+
         <label for="steps">Steps</label>
-        <textarea name="steps" id="steps"></textarea>
+        <textarea name="steps" id="steps">
+          <%= recipeInfo.steps %>
+        </textarea>
+
         <label for="food-img">Image of Cooked Food</label>
-        <input type="file" name="food-img" id="food-img" />
+        <input
+          type="file"
+          name="food-img"
+          id="food-img"
+          value="<%= recipeInfo.img %>"
+        />
+
         <button type="submit" class="fcont">Update</button>
       </form>
     </div>
