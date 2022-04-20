@@ -17,7 +17,6 @@ const create_recipe = async (req, res) => {
       time: req.body.time,
       ingredients: req.body.ingredients,
       steps: req.body.steps,
-      date: new Date().toLocaleDateString,
     });
 
     res.redirect("/recipes");
@@ -33,6 +32,22 @@ const recipes_get = async (req, res) => {
     const recipes = result;
 
     res.render("viewAllRecipes", { title: "All Recipes", recipes: recipes });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+const category_get = async (req, res) => {
+  try {
+    const result = await recipeModel
+      .find({ category: req.params.category })
+      .sort({ dateAdded: 1 });
+    const recipes = result;
+
+    res.render("viewAllRecipes", {
+      title: "All Recipes",
+      recipes: recipes,
+    });
   } catch (err) {
     console.log(err);
   }
@@ -62,19 +77,17 @@ const recipe_update_form_get = async (req, res) => {
 
 const recipe_update_form_post = async (req, res) => {
   try {
-    const result = await recipeModel.findOneAndUpdate(
-      { _id: req.params.recipe },
+    const result = await recipeModel.findByIdAndUpdate(
+      req.params.recipe,
       {
-        $set: {
-          name: req.body.name,
-          category: req.body.category,
-          description: req.body.description,
-          time: req.body.time,
-          ingredients: req.body.ingredients,
-          steps: req.body.steps,
-        },
+        name: req.body.name,
+        category: req.body.category,
+        description: req.body.description,
+        time: req.body.time,
+        ingredients: req.body.ingredients,
+        steps: req.body.steps,
       },
-      { new: true, upsert: true }
+      { new: true }
     );
 
     res.redirect(`/recipes/${result._id}`);
@@ -118,6 +131,7 @@ module.exports = {
   recipe_add_form_get,
   create_recipe,
   recipes_get,
+  category_get,
   view_recipe_get,
   recipe_update_form_get,
   recipe_update_form_post,

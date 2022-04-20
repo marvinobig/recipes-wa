@@ -9,7 +9,6 @@ const recipeSchema = new mongoose.Schema({
   ingredients: { type: Array, required: true },
   steps: { type: Array, required: true },
   user: String,
-  dateAdded: { type: Date, immutable: true },
 });
 
 const recipe = mongoose.model("recipe", recipeSchema);
