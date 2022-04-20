@@ -10,6 +10,8 @@ router.post("/newRecipe", recipeController.create_recipe);
 
 router.get("/:recipe", recipeController.view_recipe_get);
 
+router.get("/categories/:category", recipeController.category_get);
+
 router.get(
   "/:recipe/updateRecipeForm",
   recipeController.recipe_update_form_get
