@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="/stylesheets/recipes.css" />
   </head>
   <body>
-    <div class="container">
-      <%- include('partials/navbar') %>
+    <div class="container" id="view-all">
+      <%- include('partials/navbar') %> <%- include('partials/categories.ejs')
+      %>
       <br />
-      <h1>All Available Recipes</h1>
       <%- include('partials/cards') %>
     </div>
   </body>
