@@ -1,7 +1,7 @@
 const path = require("path");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const sass = require("node-sass-middleware");
+const sassMiddleware = require("node-sass-middleware");
 const multer = require("multer");
 const express = require("express");
 const app = express();
@@ -20,9 +20,10 @@ app.set("view engine", "ejs");
 
 //scss setup
 app.use(
-  sass({
+  sassMiddleware({
     src: path.join(__dirname, "public"),
     dest: path.join(__dirname, "public"),
+    debug: true,
     indentedSyntax: false,
     sourceMap: true,
   })
