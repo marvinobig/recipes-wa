@@ -7,7 +7,11 @@ router.get("/", recipeController.recipes_get);
 
 router.get("/addRecipe", recipeController.recipe_add_form_get);
 
-router.post("/newRecipe", validateRecipe(), recipeController.create_recipe);
+router.post(
+  "/newRecipe",
+  validateRecipe.validateRecipe,
+  recipeController.create_recipe
+);
 
 router.get("/:recipe", recipeController.view_recipe_get);
 
@@ -19,7 +23,8 @@ router.get(
 );
 router.post(
   "/:recipe/updateRecipe",
-  validateRecipe(),
+  validateRecipe.validateUpdateRecipe,
+  validateRecipe.validateUpdateDeletePassword,
   recipeController.recipe_update_form_post
 );
 
@@ -29,7 +34,7 @@ router.get(
 );
 router.post(
   "/:recipe/deleteRecipe",
-  validateRecipe(),
+  validateRecipe.validateUpdateDeletePassword,
   recipeController.recipe_delete_form_post
 );
 
