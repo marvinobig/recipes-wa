@@ -1,6 +1,7 @@
 const path = require("path");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const sass = require("node-sass-middleware");
 const multer = require("multer");
 const express = require("express");
 const app = express();
@@ -19,6 +20,16 @@ app.set("view engine", "ejs");
 
 // use static files setup
 app.use(express.static(path.join(__dirname, "public")));
+
+//scss setup
+app.use(
+  sass({
+    src: path.join(__dirname, "public"),
+    dest: path.join(__dirname, "public"),
+    indentedSyntax: false,
+    sourceMap: true,
+  })
+);
 
 //access to form body
 app.use(express.urlencoded({ extended: true }));
