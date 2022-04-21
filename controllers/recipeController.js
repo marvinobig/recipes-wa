@@ -69,7 +69,7 @@ const recipe_update_form_get = async (req, res) => {
     const result = await recipeModel.findById(req.params.recipe);
     const recipe = result;
 
-    res.render("updateRecipeForm", { recipeInfo: recipe });
+    res.render("updateRecipeForm", { title: "Update", recipeInfo: recipe });
   } catch (err) {
     console.log(err);
   }
@@ -101,7 +101,7 @@ const recipe_delete_form_get = async (req, res) => {
     const result = await recipeModel.findById(req.params.recipe);
     const recipe = result;
 
-    res.render("deleteRecipeForm", { recipeInfo: recipe });
+    res.render("deleteRecipeForm", { title: "Delete", recipeInfo: recipe });
   } catch (err) {
     console.log(err);
   }
