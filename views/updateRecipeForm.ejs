@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Update Recipe</title>
+    <title><%= title %> : <%= recipeInfo.name %></title>
 
     <link rel="stylesheet" href="/stylesheets/recipes.css" />
   </head>
@@ -33,14 +33,14 @@
 
         <label for="description">Description</label>
         <textarea id="description" name="description">
-          <%= recipeInfo.description %>
+          <%= recipeInfo.description %> 
         </textarea>
 
-        <label for="time-to-make">Time to Make</label>
+        <label for="time">Time to Make</label>
         <input
-          type="datetime"
-          name="time-to-make"
-          id="time-to-make"
+          type="number"
+          name="time"
+          id="time"
           value="<%= recipeInfo.time %>"
         />
 
@@ -62,7 +62,7 @@
           value="<%= recipeInfo.img %>"
         />
 
-        <button type="submit" class="fcont">Update</button>
+        <%- include('partials/pass.ejs') %>
       </form>
     </div>
   </body>
