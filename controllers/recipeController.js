@@ -57,8 +57,15 @@ const view_recipe_get = async (req, res) => {
   try {
     const result = await recipeModel.findById(req.params.recipe);
     const recipe = result;
+    const ingredients = recipe.ingredients.split(".");
+    const steps = recipe.steps.split(".");
 
-    res.render("viewRecipe", { title: recipe.name, recipe: recipe });
+    res.render("viewRecipe", {
+      title: recipe.name,
+      recipe: recipe,
+      ingredients: ingredients,
+      steps: steps,
+    });
   } catch (err) {
     console.log(err);
   }
@@ -69,7 +76,10 @@ const recipe_update_form_get = async (req, res) => {
     const result = await recipeModel.findById(req.params.recipe);
     const recipe = result;
 
-    res.render("updateRecipeForm", { title: "Update", recipeInfo: recipe });
+    res.render("updateRecipeForm", {
+      title: "Update",
+      recipeInfo: recipe,
+    });
   } catch (err) {
     console.log(err);
   }
@@ -101,7 +111,11 @@ const recipe_delete_form_get = async (req, res) => {
     const result = await recipeModel.findById(req.params.recipe);
     const recipe = result;
 
-    res.render("deleteRecipeForm", { title: "Delete", recipeInfo: recipe });
+    res.render("deleteRecipeForm", {
+      title: "Delete",
+      recipeInfo: recipe,
+      action: "deleteRecipe",
+    });
   } catch (err) {
     console.log(err);
   }
@@ -109,19 +123,11 @@ const recipe_delete_form_get = async (req, res) => {
 
 const recipe_delete_form_post = async (req, res) => {
   try {
-    const password = "delete";
+    await recipeModel.findOneAndDelete({
+      _id: req.params.recipe,
+    });
 
-    if (password === req.body.password) {
-      await recipeModel.findOneAndDelete({
-        _id: req.params.recipe,
-      });
-
-      res.redirect("/recipes");
-    } else {
-      const result = await recipeModel.find({ _id: req.params.recipe });
-
-      res.redirect(`/recipes/${result[0]._id}/`);
-    }
+    res.redirect("/recipes");
   } catch (err) {
     console.log(err);
   }
