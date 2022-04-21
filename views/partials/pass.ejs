@@ -1,11 +1,11 @@
-<h3>
-  You are about to make destructive changes to the <%= recipeInfo.name %>
-  recipe.
-</h3>
-<p>Enter password to proceed:</p>
-<form action="/recipes/<%= recipeInfo._id %>/deleteRecipe" method="post">
-  <label for="password">Password</label>
+<section>
+  <h2 class="sub-title">
+    You are about to make destructive changes to the <%= recipeInfo.name %>
+    recipe.
+  </h2>
+
+  <label for="password">Enter password to proceed:</label>
   <input id="password" type="password" name="password" />
 
-  <button class="fcont delete" type="submit"><%= title %></button>
-</form>
+  <button class="btn delete" type="submit"><%= title %></button>
+</section>
