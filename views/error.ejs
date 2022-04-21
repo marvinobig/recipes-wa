@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= error.status %></title>
+    <title><%= title %></title>
   </head>
   <body>
-    <h1><%= error.status %></h1>
+    <div class="errors">
+      <% errs.errors.forEach( err => { %>
+      <p><%= err.msg %></p>
+      <% }); %>
+    </div>
   </body>
 </html>
