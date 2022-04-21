@@ -6,27 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
 
+    <link rel="stylesheet" href="/stylesheets/reset.css" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <div class="container">
       <%- include('partials/navbar') %>
-      <div id="intro">
-        <h1>Odin Recipes</h1>
+      <main>
+        <h1 class="title">Recipes</h1>
         <p>
           Welcome to <%= title %>, the only catalog of food recipes you'll ever
           need. Add, edit & view your recipes wherever you are, whenever you
           want.
         </p>
-        <p><strong>The Odin Project</strong></p>
-      </div>
-      <div id="outro">
-        <h3>Thank You!!</h3>
-        <p>
-          This has been <strong>Marvin Obig</strong> and this is my recipe
-          project.
-        </p>
-      </div>
+      </main>
+      <%- include('partials/footer.ejs') %>
     </div>
   </body>
 </html>
