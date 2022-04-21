@@ -1,25 +1,17 @@
-$border-colour: #000000;
-$focus-color: #63c493;
-$add-btn-color: #51a152;
-$delete-btn-color: #ad4242;
-
 /* General styling */
 * {
   font-family: monospace, sans-serif;
-  font-size: 1rem;
-}
+  font-size: 1rem; }
 
 body {
   height: 100%;
   max-height: 100vh;
-  padding: 20px;
-}
+  padding: 20px; }
 
 img {
   height: auto;
   width: 100%;
-  max-width: 400px;
-}
+  max-width: 400px; }
 
 .container {
   display: grid;
@@ -28,31 +20,22 @@ img {
   gap: 20px;
   height: calc(100vh - 40px);
   padding: 20px;
-  border: 2px solid $border-colour;
-
-  nav {
+  border: 2px solid #000000; }
+  .container nav {
     grid-row: 1 / 2;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-  }
-
-  ul {
-    margin-left: 20px;
-  }
-
-  ol {
-    margin-left: 30px;
-  }
-
-  footer {
+    align-items: center; }
+  .container ul {
+    margin-left: 20px; }
+  .container ol {
+    margin-left: 30px; }
+  .container footer {
     grid: 3 / 4;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-  }
-}
+    margin-top: 20px; }
 
 .btn {
   display: flex;
@@ -61,32 +44,25 @@ img {
   width: 100%;
   max-width: 120px;
   padding: 6px 12px 6px 12px;
-  border: 2px solid $border-colour;
-
-  &:hover {
-    filter: brightness(80%);
-  }
-}
+  border: 2px solid #000000; }
+  .btn:hover {
+    filter: brightness(80%); }
 
 .add {
-  background-color: $add-btn-color;
-}
+  background-color: #51a152; }
 
 .delete {
-  background-color: $delete-btn-color;
-}
+  background-color: #ad4242; }
 
 .title {
   font-size: 2rem;
   font-weight: 900;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 .sub-title {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px; }
 
 form {
   display: flex;
@@ -94,75 +70,55 @@ form {
   align-items: center;
   gap: 30px;
   height: 100%;
-  overflow-y: scroll;
-
-  section {
+  overflow-y: scroll; }
+  form section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 5px;
     width: 100%;
-    max-width: 600px;
-
-    input {
+    max-width: 600px; }
+    form section input {
       height: 40px;
       width: 100%;
       padding: 10px;
-      border: 2px solid $border-colour;
-
-      &:focus {
+      border: 2px solid #000000; }
+      form section input:focus {
         outline: none;
-        border: 2px solid $focus-color;
-      }
-    }
-
-    select {
+        border: 2px solid #63c493; }
+    form section select {
       height: 40px;
       width: 100%;
       padding: 10px;
-      border: 2px solid $border-colour;
-
-      &:focus {
+      border: 2px solid #000000; }
+      form section select:focus {
         outline: none;
-        border: 2px solid $focus-color;
-      }
-    }
-
-    textarea {
+        border: 2px solid #63c493; }
+    form section textarea {
       resize: none;
       height: 200px;
       width: 100%;
       padding: 10px;
-      border: 2px solid $border-colour;
-
-      &:focus {
+      border: 2px solid #000000; }
+      form section textarea:focus {
         outline: none;
-        border: 2px solid $focus-color;
-      }
-    }
-
-    label {
-      font-size: 1.2rem;
-    }
-  }
-}
+        border: 2px solid #63c493; }
+    form section label {
+      font-size: 1.2rem; }
 
 /* View all page */
 #view-all {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 40px;
-}
+  gap: 40px; }
 
 .category-actions {
-  grid-column: 1 / 2;
-}
+  grid-column: 1 / 2; }
 
 .categories {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
+  gap: 20px; }
 
 .card-container {
   display: flex;
@@ -170,154 +126,118 @@ form {
   gap: 40px;
   height: 100%;
   max-height: 400px;
-  overflow-y: scroll;
-}
+  overflow-y: scroll; }
 
 .card {
   display: flex;
   gap: 20px;
   height: fit-content;
-  border: 2px solid $border-colour;
-}
+  border: 2px solid #000000; }
 
 .card-description {
   width: 100%;
-  padding: 20px;
-}
+  padding: 20px; }
 
 .card-button {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
+  justify-content: space-between; }
 
 /* view recipe */
 #recipe {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
-  gap: 20px;
-}
+  gap: 20px; }
 
 .intro {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-}
+  gap: 20px; }
 
 .description {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
+  gap: 10px; }
 
 .recipe-actions {
   display: flex;
-  gap: 10px;
-}
+  gap: 10px; }
 
 .ingredients {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
   height: 100%;
   max-height: 300px;
-  overflow-y: scroll;
-}
+  overflow-y: scroll; }
 
 .steps {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   height: 100%;
   max-height: 300px;
-  overflow-y: scroll;
-}
+  overflow-y: scroll; }
 
 @media only screen and (max-width: 641px) {
   body {
     min-height: 100vh;
-    max-height: 100%;
-  }
-
+    max-height: 100%; }
   .container {
     min-height: 100vh;
-    height: 100%;
-  }
-
+    height: 100%; }
   #view-all {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-  }
-
+    grid-template-rows: auto 1fr; }
   .category-actions {
     grid-row: 1 / 2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-  }
-
+    width: 100%; }
   .categories {
     flex-direction: row;
     max-width: 250px;
-    overflow-x: scroll;
-  }
-
+    overflow-x: scroll; }
   .card {
     flex-direction: column;
-    align-items: center;
-  }
-
+    align-items: center; }
   .card-description {
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-
+    align-items: center; }
   .card-button {
     flex-direction: column;
-    gap: 10px;
-  }
-
+    gap: 10px; }
   #recipe {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, auto);
-    gap: 20px;
-  }
-
+    gap: 20px; }
   .intro {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-  }
-
+    gap: 20px; }
   .description {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-  }
-
+    gap: 10px; }
   .recipe-actions {
     display: flex;
-    gap: 10px;
-  }
-
+    gap: 10px; }
   .ingredients {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    height: auto;
-  }
-
+    height: auto; }
   .steps {
     grid-column: 1 / 2;
     grid-row: 4 / 5;
-    height: auto;
-  }
-}
+    height: auto; } }
+
+/*# sourceMappingURL=style.css.map */
