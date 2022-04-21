@@ -6,64 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %> : <%= recipeInfo.name %></title>
 
+    <link rel="stylesheet" href="/stylesheets/reset.css" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <div class="container">
       <%- include('partials/navbar.ejs') %>
       <form action="/recipes/<%= recipeInfo._id %>/updateRecipe" method="post">
-        <label for="name">Name</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          value="<%= recipeInfo.name %>"
-        />
+        <section>
+          <label for="name">Name</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            value="<%= recipeInfo.name %>"
+          />
+        </section>
 
-        <label for="category">Category</label>
-        <select name="category" id="category">
-          <option hidden disabled selected>Select Category</option>
-          <option value="breakfasts">Breakfasts</option>
-          <option value="lunches">Lunches</option>
-          <option value="dinners">Dinners</option>
-          <option value="desserts">Desserts</option>
-          <option value="snacks">Snacks</option>
-          <option value="drinks">Drinks</option>
-        </select>
+        <section>
+          <label for="category">Category</label>
+          <select name="category" id="category">
+            <option hidden disabled selected>Select Category</option>
+            <option value="breakfasts">Breakfasts</option>
+            <option value="lunches">Lunches</option>
+            <option value="dinners">Dinners</option>
+            <option value="desserts">Desserts</option>
+            <option value="snacks">Snacks</option>
+            <option value="drinks">Drinks</option>
+          </select>
+        </section>
 
-        <label for="description">Description</label>
-        <textarea id="description" name="description">
-          <%= recipeInfo.description %> 
-        </textarea>
+        <section>
+          <label for="description">Description</label>
+          <textarea id="description" name="description">
+<%= recipeInfo.description %></textarea
+          >
+        </section>
 
-        <label for="time">Time to Make</label>
-        <input
-          type="number"
-          name="time"
-          id="time"
-          value="<%= recipeInfo.time %>"
-        />
+        <section>
+          <label for="time">Time to Make</label>
+          <input
+            type="number"
+            name="time"
+            id="time"
+            value="<%= recipeInfo.time %>"
+          />
+        </section>
 
-        <label for="ingredients">Ingredients</label>
-        <textarea name="ingredients" id="ingredients">
-          <%= recipeInfo.ingredients %>
-        </textarea>
+        <section>
+          <label for="ingredients">Ingredients</label>
+          <textarea name="ingredients" id="ingredients">
+<%= recipeInfo.ingredients %></textarea
+          >
+        </section>
 
-        <label for="steps">Steps</label>
-        <textarea name="steps" id="steps">
-          <%= recipeInfo.steps %>
-        </textarea>
+        <section>
+          <label for="steps">Steps</label>
+          <textarea name="steps" id="steps"><%= recipeInfo.steps %></textarea>
+        </section>
 
-        <label for="food-img">Image of Cooked Food</label>
-        <input
-          type="file"
-          name="food-img"
-          id="food-img"
-          value="<%= recipeInfo.img %>"
-        />
+        <section>
+          <label for="food-img">Image of Cooked Food</label>
+          <input
+            type="file"
+            name="food-img"
+            id="food-img"
+            value="<%= recipeInfo.img %>"
+          />
+        </section>
 
         <%- include('partials/pass.ejs') %>
       </form>
+
+      <%- include('partials/footer.ejs') %>
     </div>
   </body>
 </html>

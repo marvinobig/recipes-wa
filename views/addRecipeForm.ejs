@@ -6,36 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Recipe</title>
 
+    <link rel="stylesheet" href="/stylesheets/reset.css" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <div class="container">
       <%- include('partials/navbar.ejs') %>
       <form action="/recipes/newRecipe" method="post">
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" />
-        <label for="category">Category</label>
-        <select name="category" id="category">
-          <option hidden disabled selected>Select Category</option>
-          <option value="breakfasts">Breakfasts</option>
-          <option value="lunches">Lunches</option>
-          <option value="dinners">Dinners</option>
-          <option value="desserts">Desserts</option>
-          <option value="snacks">Snacks</option>
-          <option value="drinks">Drinks</option>
-        </select>
-        <label for="description">Description</label>
-        <textarea id="description" name="description"></textarea>
-        <label for="time">Time to Make</label>
-        <input type="number" name="time" id="time" />
-        <label for="ingredients">Ingredients</label>
-        <textarea name="ingredients" id="ingredients"></textarea>
-        <label for="steps">Steps</label>
-        <textarea name="steps" id="steps"></textarea>
-        <label for="food-img">Image of Cooked Food</label>
-        <input type="file" name="food-img" id="food-img" />
+        <section>
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" />
+        </section>
 
-        <button type="submit" class="fcont">Add</button>
+        <section>
+          <label for="category">Category</label>
+          <select name="category" id="category">
+            <option hidden disabled selected>Select Category</option>
+            <option value="breakfasts">Breakfasts</option>
+            <option value="lunches">Lunches</option>
+            <option value="dinners">Dinners</option>
+            <option value="desserts">Desserts</option>
+            <option value="snacks">Snacks</option>
+            <option value="drinks">Drinks</option>
+          </select>
+        </section>
+
+        <section>
+          <label for="description">Description</label>
+          <textarea id="description" name="description"></textarea>
+        </section>
+
+        <section>
+          <label for="time">Time to Make</label>
+          <input type="number" name="time" id="time" />
+        </section>
+
+        <section>
+          <label for="ingredients">Ingredients</label>
+          <textarea name="ingredients" id="ingredients"></textarea>
+        </section>
+
+        <section>
+          <label for="steps">Steps</label>
+          <textarea name="steps" id="steps"></textarea>
+        </section>
+
+        <section>
+          <label for="food-img">Image of Cooked Food</label>
+          <input type="file" name="food-img" id="food-img" />
+        </section>
+
+        <button type="submit" class="btn">Add</button>
       </form>
     </div>
   </body>

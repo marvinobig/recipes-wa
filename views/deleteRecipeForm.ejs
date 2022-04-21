@@ -6,11 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %> : <%= recipeInfo.name %></title>
 
+    <link rel="stylesheet" href="/stylesheets/reset.css" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <div class="container">
-      <%- include('partials/navbar.ejs') %> <%- include('partials/pass.ejs') %>
+      <%- include('partials/navbar.ejs') %>
+      <main>
+        <form
+          action="/recipes/<%= recipeInfo._id %>/<%= action %> "
+          method="post"
+        >
+          <%- include('partials/pass.ejs') %>
+        </form>
+      </main>
+      <%- include('partials/footer.ejs') %>
     </div>
   </body>
 </html>

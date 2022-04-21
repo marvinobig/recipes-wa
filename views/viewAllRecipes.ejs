@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= title %></title>
 
+    <link rel="stylesheet" href="/stylesheets/reset.css" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
-    <div class="container" id="view-all">
-      <%- include('partials/navbar') %> <%- include('partials/categories.ejs')
-      %>
-      <br />
-      <%- include('partials/cards') %>
+    <div class="container">
+      <%- include('partials/navbar') %>
+      <main id="view-all">
+        <%- include('partials/categories.ejs') %> <%- include('partials/cards')
+        %>
+      </main>
+      <%- include('partials/footer.ejs') %>
     </div>
   </body>
 </html>

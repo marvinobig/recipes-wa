@@ -6,28 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe: <%= title %></title>
 
+    <link rel="stylesheet" href="/stylesheets/reset.css" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <div class="container">
       <%- include('partials/navbar.ejs') %>
-
-      <div class="description">
-        <h1><%= recipe.name %></h1>
-        <img src="<%= locals.recipe.img %> " alt="<%= recipe.name %>" />
-        <h2>Description</h2>
-        <p><%= recipe.description %></p>
-        <p>Prep Time: <%= recipe.time %> mins</p>
-      </div>
-      <div class="ingredients">
-        <h2>Ingredients</h2>
-        <p><%= recipe.ingredients %></p>
-      </div>
-      <div class="steps">
-        <h2>Steps</h2>
-        <%= recipe.steps %>
-      </div>
-      <%- include('partials/actions.ejs') %>
+      <main id="recipe">
+        <section class="intro">
+          <h1 class="title"><%= recipe.name %></h1>
+          <img src="<%= locals.recipe.img %> " alt="<%= recipe.name %>" />
+          <section class="prep-time">
+            <h2 class="sub-title">Prep Time</h2>
+            <p><%= recipe.time %> mins</p>
+          </section>
+        </section>
+        <section class="description">
+          <h2 class="sub-title">Description</h2>
+          <p><%= recipe.description %></p>
+          <%- include('partials/actions.ejs') %>
+        </section>
+        <section class="ingredients">
+          <h2 class="sub-title">Ingredients</h2>
+          <ul>
+            <% ingredients.forEach( ingredient => { %>
+            <li><%= ingredient %></li>
+            <% }) %>
+          </ul>
+        </section>
+        <section class="steps">
+          <h2 class="sub-title">Steps</h2>
+          <ol>
+            <% steps.forEach( step => { %>
+            <li><%= step %></li>
+            <% }) %>
+          </ol>
+        </section>
+      </main>
+      <%- include('partials/footer.ejs') %>
     </div>
   </body>
 </html>
