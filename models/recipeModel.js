@@ -8,8 +8,7 @@ const recipeSchema = new mongoose.Schema({
   time: Number,
   ingredients: { type: Array, required: true },
   steps: { type: Array, required: true },
-  user: String,
 });
 
-const recipe = mongoose.model("recipe", recipeSchema);
+const recipe = mongoose.model("food_recipe", recipeSchema);
 module.exports = recipe;
