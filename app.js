@@ -2,7 +2,6 @@ const path = require("path");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const sassMiddleware = require("node-sass-middleware");
-const multer = require("multer");
 const express = require("express");
 const app = express();
 
@@ -11,7 +10,7 @@ dotenv.config();
 // database setup
 const db = process.env.MONGODB_URI;
 mongoose.connect(db, () => {
-  console.log("Connected");
+  console.log("DB Connected");
 });
 
 // ejs setup
