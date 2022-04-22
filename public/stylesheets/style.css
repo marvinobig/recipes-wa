@@ -196,6 +196,21 @@ form {
   max-height: 300px;
   overflow-y: scroll; }
 
+/* error page */
+#err404,
+#error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  align-items: center; }
+  #err404 p,
+  #error p {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 5px; }
+
 @media only screen and (max-width: 768px) {
   body {
     min-height: 100vh;
