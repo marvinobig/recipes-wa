@@ -41,4 +41,17 @@ const recipesRouter = require("./routes/recipesRouter");
 app.use("/", indexRouter);
 app.use("/recipes", recipesRouter);
 
+app.use((req, res, next) => {
+  next({
+    status: 404,
+    message: "Not Found",
+  });
+});
+
+app.use((err, req, res, next) => {
+  if (err.status === 404) {
+    return res.status(400).render("404", { title: err.status, err: err });
+  }
+});
+
 module.exports = app;
