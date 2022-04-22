@@ -12,7 +12,11 @@
   <body>
     <div class="container">
       <%- include('partials/navbar.ejs') %>
-      <form action="/recipes/newRecipe" method="post">
+      <form
+        action="/recipes/newRecipe"
+        method="post"
+        enctype="multipart/form-data"
+      >
         <section>
           <label for="name">Name</label>
           <input id="name" type="text" name="name" />

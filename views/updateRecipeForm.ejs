@@ -12,7 +12,11 @@
   <body>
     <div class="container">
       <%- include('partials/navbar.ejs') %>
-      <form action="/recipes/<%= recipeInfo._id %>/updateRecipe" method="post">
+      <form
+        action="/recipes/<%= recipeInfo._id %>/updateRecipe"
+        method="post"
+        enctype="multipart/form-data"
+      >
         <section>
           <label for="name">Name</label>
           <input
@@ -63,16 +67,6 @@
         <section>
           <label for="steps">Steps</label>
           <textarea name="steps" id="steps"><%= recipeInfo.steps %></textarea>
-        </section>
-
-        <section>
-          <label for="food-img">Image of Cooked Food</label>
-          <input
-            type="file"
-            name="food-img"
-            id="food-img"
-            value="<%= recipeInfo.img %>"
-          />
         </section>
 
         <%- include('partials/pass.ejs') %>

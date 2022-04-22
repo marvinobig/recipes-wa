@@ -4,7 +4,12 @@
     <% recipes.forEach(recipe => { %>
     <div class="card">
       <div class="card-img">
-        <img src="<%= recipe.img %> " alt="cooked recipe" />
+        <img
+          id="card-img"
+          src="/<%= recipe.img %> "
+          alt="cooked recipe"
+          loading="lazy"
+        />
       </div>
       <div class="card-description">
         <h2 class="sub-title"><%= recipe.name %></h2>
