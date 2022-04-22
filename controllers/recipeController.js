@@ -1,3 +1,5 @@
+const fs = require("fs");
+const path = require("path");
 const recipeModel = require("../models/recipeModel");
 
 const recipe_add_form_get = (req, res) => {
@@ -17,6 +19,7 @@ const create_recipe = async (req, res) => {
       time: req.body.time,
       ingredients: req.body.ingredients,
       steps: req.body.steps,
+      img: req.file.filename,
     });
 
     res.redirect("/recipes");
@@ -123,7 +126,12 @@ const recipe_delete_form_get = async (req, res) => {
 
 const recipe_delete_form_post = async (req, res) => {
   try {
-    await recipeModel.findOneAndDelete({
+    const result = await recipeModel.findById(req.params.recipe);
+
+    filePath = path.join(__dirname, "../public", result.img);
+    fs.unlink(filePath, (err) => console.log(err));
+
+    await result.deleteOne({
       _id: req.params.recipe,
     });
 
