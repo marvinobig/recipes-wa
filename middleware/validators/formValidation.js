@@ -46,7 +46,6 @@ const validateRecipe = [
     .escape(),
   (req, res, next) => {
     const err = validationResult(req);
-    console.log(err);
 
     if (!err.isEmpty()) {
       return res

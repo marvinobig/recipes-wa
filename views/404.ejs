@@ -12,10 +12,9 @@
   <body>
     <div class="container">
       <%- include('partials/navbar.ejs') %>
-      <main id="error">
-        <% errs.errors.forEach( err => { %>
-        <p><%= err.msg %></p>
-        <% }); %>
+      <main id="err404">
+        <p><%= err.status %></p>
+        <span><%= err.message %></span>
       </main>
       <%- include('partials/footer.ejs') %>
     </div>

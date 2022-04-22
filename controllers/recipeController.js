@@ -6,7 +6,7 @@ const recipe_add_form_get = (req, res) => {
   try {
     res.render("addRecipeForm");
   } catch (err) {
-    console.log(err);
+    res.render("404", { title: "Error", err: err });
   }
 };
 
@@ -24,7 +24,6 @@ const create_recipe = async (req, res) => {
 
     res.redirect("/recipes");
   } catch (err) {
-    console.log(err);
     res.redirect("/");
   }
 };
@@ -36,7 +35,7 @@ const recipes_get = async (req, res) => {
 
     res.render("viewAllRecipes", { title: "All Recipes", recipes: recipes });
   } catch (err) {
-    console.log(err);
+    res.render("404", { title: "Error", err: err });
   }
 };
 
@@ -52,7 +51,7 @@ const category_get = async (req, res) => {
       recipes: recipes,
     });
   } catch (err) {
-    console.log(err);
+    res.render("404", { title: "Error", err: err });
   }
 };
 
@@ -70,7 +69,7 @@ const view_recipe_get = async (req, res) => {
       steps: steps,
     });
   } catch (err) {
-    console.log(err);
+    res.render("404", { title: "Error", err: err });
   }
 };
 
@@ -84,7 +83,7 @@ const recipe_update_form_get = async (req, res) => {
       recipeInfo: recipe,
     });
   } catch (err) {
-    console.log(err);
+    res.render("404", { title: "Error", err: err });
   }
 };
 
@@ -105,7 +104,7 @@ const recipe_update_form_post = async (req, res) => {
 
     res.redirect(`/recipes/${result._id}`);
   } catch (err) {
-    console.log(err);
+    res.render("404", { title: "Error", err: err });
   }
 };
 
@@ -120,7 +119,7 @@ const recipe_delete_form_get = async (req, res) => {
       action: "deleteRecipe",
     });
   } catch (err) {
-    console.log(err);
+    res.render("404", { title: "Error", err: err });
   }
 };
 
@@ -137,7 +136,7 @@ const recipe_delete_form_post = async (req, res) => {
 
     res.redirect("/recipes");
   } catch (err) {
-    console.log(err);
+    res.render("404", { title: "Error", err: err });
   }
 };
 
