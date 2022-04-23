@@ -1,6 +1,9 @@
 {
   "name": "recipes",
   "version": "1.0.0",
+  "engines": { 
+    "node": "17.9.0"
+  },
   "description": "I created a recipe website where you can upload recipes to a database and display them.",
   "main": "index.js",
   "scripts": {
