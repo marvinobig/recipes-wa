@@ -17,6 +17,8 @@ This application is a recipe website that allows users to upload, view, edit and
 
 ## Installation
 
+First download project from Github by going over to the green 'code' button and downloading the zip file. Once downloaded, extract the folder.
+
 Use the package manager [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to install Recipes.
 
 ```terminal
