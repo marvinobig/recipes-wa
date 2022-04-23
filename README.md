@@ -2,6 +2,13 @@
 
 This application is a recipe website that allows users to upload, view, edit and delete their food recipes.
 
+## Features
+- Create Recipes & store them for viewing in a database.
+- Edit already posted recipes (hidden behind password).
+- Upload images with your recipes.
+- Delete recipes from the database (hidded behind password).
+- Form validation.
+
 ## Languages/Tools used:
 
 - EJS
