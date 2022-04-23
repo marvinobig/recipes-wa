@@ -15,8 +15,9 @@ This application is a recipe website that allows users to upload, view, edit and
 - Chrome Dev Tools
 - Favicon.cc
 
-## Live Link 
-[Recipes]()
+## Live Link
+
+[Recipes](https://recipes-wa.herokuapp.com/)
 
 ## Installation
 
@@ -35,9 +36,11 @@ npm run start
 ```
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
