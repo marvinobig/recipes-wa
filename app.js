@@ -2,6 +2,7 @@ const path = require("path");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const sassMiddleware = require("node-sass-middleware");
+const helmet = require("helmet");
 const express = require("express");
 const app = express();
 
@@ -16,6 +17,8 @@ mongoose.connect(db, () => {
 // ejs setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+
+app.use(helmet());
 
 //scss setup
 app.use(
