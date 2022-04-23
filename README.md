@@ -30,7 +30,7 @@ npm install
 
 ## Usage
 
-```python
+```terminal
 npm run start
 ```
 
