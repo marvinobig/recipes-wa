@@ -30,7 +30,7 @@ This application is a recipe website that allows users to upload, view, edit and
 
 First download project from Github by going over to the green 'code' button and downloading the zip file. Once downloaded, extract the folder.
 
-Use the package manager [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to install Recipes.
+Use the package manager [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to install Recipe's dependencies.
 
 ```terminal
 npm install
@@ -45,8 +45,6 @@ npm run start
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 
