@@ -2,7 +2,12 @@
 
 This application is a recipe website that allows users to upload, view, edit and delete their food recipes.
 
+## Disclaimer
+
+Image upload functionality uses multer and uploads to heroku's filesystem so any image that is uploaded will be deleted after a certain amount of time has passed.
+
 ## Features
+
 - Create Recipes & store them for viewing in a database.
 - Edit already posted recipes (hidden behind password).
 - Upload images with your recipes.
