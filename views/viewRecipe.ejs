@@ -17,15 +17,15 @@
       <main id="recipe">
         <section class="intro">
           <h1 class="title"><%= recipe.name %></h1>
-          <section class="prep-time">
-            <h2 class="sub-title">Prep Time</h2>
-            <p><%= recipe.time %> mins</p>
-          </section>
         </section>
         <section class="description">
           <h2 class="sub-title">Description</h2>
           <p><%= recipe.description %></p>
           <%- include('partials/actions.ejs') %>
+        </section>
+        <section class="prep-time">
+          <h2 class="sub-title">Prep Time</h2>
+          <p><%= recipe.time %> mins</p>
         </section>
         <section class="ingredients">
           <h2 class="sub-title">Ingredients</h2>
