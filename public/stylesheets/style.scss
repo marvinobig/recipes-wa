@@ -232,6 +232,7 @@ form {
   grid-column: 2 / 3;
   grid-row: 2 / 5;
   height: 100%;
+  max-height: 500px;
   overflow-y: scroll;
 }
 
