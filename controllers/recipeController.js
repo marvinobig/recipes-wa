@@ -19,7 +19,6 @@ const create_recipe = async (req, res) => {
       time: req.body.time,
       ingredients: req.body.ingredients,
       steps: req.body.steps,
-      img: req.file.filename,
     });
 
     res.redirect("/recipes");
