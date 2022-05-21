@@ -10,15 +10,6 @@ body {
   padding: 20px;
 }
 
-img {
-  aspect-ratio: 1;
-  width: 100%;
-  max-width: 500px;
-  font-size: 0;
-  border: 2px solid #000000;
-  background-color: #493b3b;
-}
-
 .container {
   display: -ms-grid;
   display: grid;
@@ -231,24 +222,6 @@ form section label {
   height: -moz-fit-content;
   height: fit-content;
   border: 2px solid #000000;
-}
-
-#card-img {
-  width: 100%;
-}
-
-.card-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  padding: 10px;
 }
 
 .card-description {

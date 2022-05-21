@@ -16,15 +16,6 @@ body {
   padding: 20px;
 }
 
-img {
-  aspect-ratio: 1;
-  width: 100%;
-  max-width: 500px;
-  font-size: 0;
-  border: 2px solid $border-colour;
-  background-color: $img-bg-color;
-}
-
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -180,18 +171,6 @@ form {
   gap: 20px;
   height: fit-content;
   border: 2px solid $border-colour;
-}
-
-#card-img {
-  width: 100%;
-}
-
-.card-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 10px;
 }
 
 .card-description {
