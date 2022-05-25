@@ -434,8 +434,8 @@ form section label {
   #recipe {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: (auto)[4];
-        grid-template-rows: repeat(4, auto);
+    -ms-grid-rows: (auto)[5];
+        grid-template-rows: repeat(5, auto);
     gap: 20px;
   }
   .intro {
@@ -470,6 +470,14 @@ form section label {
             flex-direction: column;
     gap: 10px;
   }
+  .prep-time {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+  }
   .recipe-actions {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -480,18 +488,18 @@ form section label {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
-    -ms-grid-row: 3;
+    -ms-grid-row: 4;
     -ms-grid-row-span: 1;
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
     height: auto;
   }
   .steps {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
-    -ms-grid-row: 4;
+    -ms-grid-row: 5;
     -ms-grid-row-span: 1;
-    grid-row: 4 / 5;
+    grid-row: 5 / 6;
     height: auto;
   }
 }

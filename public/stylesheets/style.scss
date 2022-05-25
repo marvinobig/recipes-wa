@@ -309,7 +309,7 @@ form {
 
   #recipe {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
     gap: 20px;
   }
 
@@ -329,6 +329,11 @@ form {
     gap: 10px;
   }
 
+  .prep-time {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
   .recipe-actions {
     display: flex;
     gap: 10px;
@@ -336,13 +341,13 @@ form {
 
   .ingredients {
     grid-column: 1 / 2;
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
     height: auto;
   }
 
   .steps {
     grid-column: 1 / 2;
-    grid-row: 4 / 5;
+    grid-row: 5 / 6;
     height: auto;
   }
 }
